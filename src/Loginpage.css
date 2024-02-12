@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+:root {
+    --myfont: 'Mulish', sans-serif;
+    --mybtnfont: 'Montserrat', sans-serif;
+    --lg-lightcolor: linear-gradient(
+        rgb(116, 235, 213, 0.6),
+        rgb(159, 172, 230, 0.6)
+    );
+    --lg-color: linear-gradient(#74ebd5, #9face6);
+}
+body {
+    /* background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background-color: transparent;
+  background-size: 100%;
+  background-repeat: no-repeat; */
+    font-family: var(--myfont);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+.form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-border-redius: 10px;
+    box-shadow: 0.2;
+    overflow: hidden;
+    width: calc(100vh - 30vh);
+    max-width: 400px;
+    min-height: 65vh;
+    /* max-height: 100vh; */
+}
+.header {
+    background: var(--lg-color);
+    padding: 30px 0;
+}
+.header h2 {
+    font-family: var(--mybtnfont);
+    text-align: center;
+    font-size: 24px;
+}
+.formtext {
+    padding: 30px 30px;
+    background-color: #dfe9e7;
+}
+.formtext .all {
+    position: relative;
+}
+.formtext .all label {
+    display: block;
+    margin-bottom: 10px;
+    color: #000000;
+    font-weight: 700;
+}
+.formtext .all input {
+    display: block;
+    width: 100%;
+    padding: 10px 10px 10px 15px;
+    border: 1px solid #d6d6d6;
+}
+.formtext .all input::placeholder {
+    color: #a8a7a7;
+}
+
+.formtext .all i {
+    position: absolute;
+    top: 39px;
+    right: 10px;
+    visibility: hidden;
+}
+.formtext .success input {
+    border-color: #068e1f;
+    box-shadow: none;
+}
+.formtext .success .fa-circle-check {
+    color: #068e1f;
+    visibility: visible;
+}
+.formtext .error input {
+    border-color: #d8170d;
+    box-shadow: none;
+}
+.formtext .error .fa-circle-exclamation {
+    color: #d8170d;
+    visibility: visible;
+}
+.formtext .all small {
+    visibility: hidden;
+}
+.formtext .error small {
+    visibility: visible;
+}
+.formtext .border {
+    border-radius: 5px;
+}
+.formtext .forgot-password {
+    display: flex;
+}
+.formtext .forgot-password a {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: end;
+}
+.formtext .btn-sign {
+    width: 100%;
+    padding: 8px;
+    background-color: #1a48d3;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    margin: 15px 0;
+}
+.formtext .google-sign {
+    display: block;
+    /* padding-left: 60px; */
+}
+.formtext .google-sign-btn {
+    text-align: center;
+    padding: 300px;
+    /* width: 400px; */
+}

@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Login from './Login'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './Home'
+import { GoogleOAuthProvider } from '@react-oauth/google'
+import SignUp from './SignUp'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <>
+            <BrowserRouter>
+                <GoogleOAuthProvider
+                    clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+                >
+                    <Routes>
+                        <Route exact path="/Login" element={<Login />} />
+                        <Route exact path="/" element={<Home />}></Route>
+                        <Route
+                            exact
+                            path="/signUp"
+                            element={<SignUp />}
+                        ></Route>
+                    </Routes>
+                </GoogleOAuthProvider>
+            </BrowserRouter>
+        </>
+    )
 }
 
-export default App;
+export default App
